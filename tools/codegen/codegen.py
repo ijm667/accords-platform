@@ -67,7 +67,7 @@ def _parse_all_input_files(input_paths):
         # TODO consider directory recursion
         # Add all files in dir or specific file dependant on type
             if S_ISDIR(mode):
-                files.extend(glob.glob(inpath + "/*"))
+                files.extend(glob.glob(inpath + "/*.xml"))
             if S_ISREG(mode):
                 files.append(inpath)
         else:
